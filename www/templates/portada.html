@@ -1,14 +1,18 @@
 <ion-view>
     <ion-content>
         <div>
-            <p>Carlos</p>
-        </div>
-        <button ui-sref="menu" class="button button-positive" > 
-             Ir a Menu
-        </button>
-       <div ng-controller="controladorPortada">
-            <h1>{{mensaje}}</h1>
-
-       </div>
+            <p>Inicie sesion para ver la lista</p>
+    </div>
+        <div class="list">
+        <label class="item item-input">
+            <input type="email" ng-model="email"placeholder="Email">
+        </label>
+            <label class="item item-input">
+            <input type="password" ng-model="password"data-ng-minlength="3" placeholder="Password">
+        </label>
+        <button ui-sref="menu" class="button button-outline button-positive" ng-disabled="!email || !password">
+            Log In
+        </button>            
+    </div>
     </ion-content>
 </ion-view>
