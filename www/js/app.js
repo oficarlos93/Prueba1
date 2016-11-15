@@ -22,3 +22,16 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+
+.config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('portada', {
+                url: '/portada',
+                templateUrl: 'templates/portada.html'
+            });
+
+    $urlRouterProvider.otherwise("portada");
+});
+
+
